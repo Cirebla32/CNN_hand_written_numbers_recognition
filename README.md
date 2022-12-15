@@ -37,8 +37,8 @@ Then, you obtain a .npz file containing 4 files:
 \>\>\>    
 \>\>\> i = 1   
 \>\>\> for im in X_train:   
-...     plt.imsave('Path/to/save/dataset/' + str(i) + '.jpg', im, format = 'jpg')    
-...     i += 1   
+... &nbsp; plt.imsave('Path/to/save/dataset/' + str(i) + '.jpg', im, format = 'jpg')    
+... &nbsp; i += 1   
 \>\>\>    
 \>\>\> #Now, you can go to 'Path/to/save/dataset/' to see the 60,000 pictures of hand written numbers   
   
