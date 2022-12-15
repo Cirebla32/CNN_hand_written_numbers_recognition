@@ -20,9 +20,9 @@ Then, you obtain a .npz file containing 4 files:
   - y_train.npy
   
  x_train.npy contains 60,000 images (28x28) gathered in the same file. 
- To save the dataset as a real set of pictures, you need to proceed like the following:
-\>\>\> import numpy as np
-\>\>\> import pandas as pd
+ To save the dataset as a real set of pictures, you need to proceed like the following:   
+\>\>\> import numpy as np   
+\>\>\> import pandas as pd   
 \>\>\> import matplotlib.pyplot as plt
 \>\>\> import seaborn as sns
 \>\>\> import tensorflow as tf
