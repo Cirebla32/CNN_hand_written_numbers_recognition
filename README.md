@@ -1,4 +1,4 @@
-# CNN_hand_written_numbers_recognition by ADJOVI Albéric | CHITOU Kader | IGABOUYI-CHOBLI Hermine | SOTOHOU Aristide
+# CNN_hand_written_numbers_recognition by ADJOVI Albéric | CHITOU Kader | IGABOUY CHOBLI Hermine | SOTOHOU Aristide
 
 Command for running the project: <python3 blabla>
 
