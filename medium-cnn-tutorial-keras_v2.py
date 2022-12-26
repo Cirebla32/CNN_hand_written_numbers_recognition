@@ -12,7 +12,7 @@ from keras.layers import Flatten
 from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 
-import preparedata as pr
+import preparedata_v2 as pr
 import cnnutils as cu
 
 from os import system
