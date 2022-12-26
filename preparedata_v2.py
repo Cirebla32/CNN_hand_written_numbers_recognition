@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan 11 10:32:55 2019
+
 @author: Pensée Artificielle
 """
 import numpy as np
 from keras.datasets import mnist
 from keras.utils import np_utils
-from keras import backend as K
-K.set_image_dim_ordering('th')
 
 # fix random seed for reproducibility
 seed = 7
@@ -15,10 +14,11 @@ np.random.seed(seed)
 
 def get_and_prepare_data_mnist():
     # load data
-    (X_train, y_train), (X_test, y_test) = mnist.load_data()
-    # reshape to be [samples][pixels][width][height]
-    X_train = X_train.reshape(X_train.shape[0], 1, 28, 28).astype('float32')
-    X_test = X_test.reshape(X_test.shape[0], 1, 28, 28).astype('float32')
+    #(X_train, y_train), (X_test, y_test) = mnist.load_data()
+    (X_train, y_train), (X_test, y_test) = mnist.load_data("/media/rc/A496C27996C24C0C/Users/Alberic/Downloads/RiCo/Cours Epac/G.I.T/4/7th Semester/Intelligence artificielle et applications (IAA2847)/2022/Xposés/TP/CNN_hand_written_numbers_recognition/mnist.npz")
+    # reshape to be [samples][width][height][pixels]
+    X_train = X_train.reshape(X_train.shape[0], 28, 28, 1).astype('float32')
+    X_test = X_test.reshape(X_test.shape[0], 28, 28, 1).astype('float32')
     
     
     # normalize inputs from 0-255 to 0-1
