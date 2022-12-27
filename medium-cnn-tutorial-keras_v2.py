@@ -47,4 +47,4 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_s
 # Evaluate the model
 cu.print_model_error_rate(model, X_test, y_test)
 # Save the model
-#cu.save_keras_model(model, "save_model/medium_model_cnn")
+cu.save_keras_model(model, "save_model_v2/medium_model_v2_cnn")

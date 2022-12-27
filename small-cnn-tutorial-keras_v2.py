@@ -22,7 +22,7 @@ seed = 7
 np.random.seed(seed)
 
 # import MNIST dataset
-(X_train, y_train), (X_test, y_test), num_classes = pr.get_and_prepare_data_mnist
+(X_train, y_train), (X_test, y_test), num_classes = pr.get_and_prepare_data_mnist()
 
 # define the small model
 def small_model():
@@ -46,4 +46,4 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_s
 # Evaluate the model
 cu.print_model_error_rate(model, X_test, y_test)
 # Save the model
-#cu.save_keras_model(model, "save_model/small_model_cnn")
+cu.save_keras_model(model, "save_model_v2/small_model_v2_cnn")
