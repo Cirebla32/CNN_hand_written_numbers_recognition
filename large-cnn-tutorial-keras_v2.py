@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jan 10 16:29:40 2019
-
-@author: Pensée Artificielle
+@author: Group 6
 """
 import numpy as np
 from keras.models import Sequential
@@ -13,7 +11,7 @@ from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 
 import preparedata_v2 as pr
-import cnnutils as cu
+import cnnutils_v2 as cu
 
 from os import system
 a = system("clear")

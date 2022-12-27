@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jan 10 01:20:15 2019
-
-@author: soldier
+@author: Group 6
 """
 #Imports for data, cf : https://keras.io/datasets/
 from keras.datasets import mnist
@@ -13,12 +11,15 @@ from keras.utils import to_categorical
 
 import numpy as np
 
+from os import system
+import cnnutils_v2 as cu
+
 # fix random seed for reproducibility
 seed = 7
 np.random.seed(seed)
 
 #download mnist data and split into train and test sets
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
+(X_train, y_train), (X_test, y_test) = mnist.load_data("/chemin/absolu/vers/mnist.npz")
 
 #reshape data to fit model
 X_train = X_train.reshape(60000,28,28,1)
@@ -41,4 +42,10 @@ model.add(Dense(10, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 #train model
+a = system("clear")
 model.fit(X_train, y_train,validation_data=(X_test, y_test), epochs=10)
+
+# Evaluate the model
+cu.print_model_error_rate(model, X_test, y_test)
+# Save the model
+cu.save_keras_model(model, "save_model_v2/no_preparation_small_model_v2_cnn")

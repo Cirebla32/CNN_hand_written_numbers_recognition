@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 11 10:32:55 2019
-
-@author: Pensée Artificielle
+@author: Group 6
 """
 import numpy as np
 from keras.datasets import mnist
@@ -15,7 +13,7 @@ np.random.seed(seed)
 def get_and_prepare_data_mnist():
     # load data
     #(X_train, y_train), (X_test, y_test) = mnist.load_data()
-    (X_train, y_train), (X_test, y_test) = mnist.load_data("/media/rc/A496C27996C24C0C/Users/Alberic/Downloads/RiCo/Cours Epac/G.I.T/4/7th Semester/Intelligence artificielle et applications (IAA2847)/2022/Xposés/TP/CNN_hand_written_numbers_recognition/mnist.npz")
+    (X_train, y_train), (X_test, y_test) = mnist.load_data("/chemin/absolu/vers/mnist.npz")
     # reshape to be [samples][width][height][pixels]
     X_train = X_train.reshape(X_train.shape[0], 28, 28, 1).astype('float32')
     X_test = X_test.reshape(X_test.shape[0], 28, 28, 1).astype('float32')

@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jan 11 10:22:15 2019
-
-@author: Pensée Artificielle
+@author: Group 6
 """
 from keras.models import model_from_json
 
@@ -62,5 +60,5 @@ def import_custom_image_to_dataset(filename):
     #Normalize
     x = x / 255
     
-    plt.imshow(x, cmap=plt.get_cmap('gray'))
+    plt.imshow(x.reshape(28, 28, 1), cmap=plt.get_cmap('gray'))
     return x
