@@ -4,12 +4,13 @@ Command for running the project: <python3 blabla>
 
 # Requirements
 
-- numpy
-- pandas
-- matplotlib
-- seaborn
-- tensorflow
-- sklearn
+- Python 3
+- Pip 3
+- Tensorflow
+- Keras
+- Matplotlib
+- Pillow
+- Numpy
 
 # Dataset 
 Dataset is downloadable at https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
